@@ -1,0 +1,234 @@
+/* ================================
+   SIMPUS-Mini - Custom Bootstrap CSS
+   ================================ */
+
+:root {
+    --primary-dark: #102a43;
+    --primary-blue: #1d5b8a;
+    --accent-cyan: #2ec4b6;
+    --soft-bg: #f4f8fb;
+    --text-dark: #243b53;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--soft-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar-custom {
+    background: linear-gradient(135deg, #102a43, #1d5b8a);
+}
+
+.navbar-brand {
+    letter-spacing: 0.5px;
+}
+
+.navbar-brand span {
+    color: var(--accent-cyan);
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    margin-left: 5px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Main */
+main {
+    min-height: calc(100vh - 160px);
+}
+
+/* Card */
+.card-modern {
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(16, 42, 67, 0.08);
+    overflow: hidden;
+}
+
+.card-modern:hover {
+    box-shadow: 0 12px 30px rgba(16, 42, 67, 0.13);
+}
+
+/* Page heading */
+.page-heading {
+    border-left: 5px solid var(--accent-cyan);
+    padding-left: 15px;
+}
+
+.page-heading h2 {
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+/* Statistics */
+.stat-card {
+    border: none;
+    border-radius: 16px;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    right: -25px;
+    bottom: -25px;
+}
+
+.stat-icon {
+    font-size: 2rem;
+    opacity: 0.85;
+}
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+/* Custom background cards */
+.stat-books {
+    background: linear-gradient(135deg, #1d5b8a, #2980b9);
+}
+
+.stat-members {
+    background: linear-gradient(135deg, #168aad, #2ec4b6);
+}
+
+.stat-loans {
+    background: linear-gradient(135deg, #f4a261, #e76f51);
+}
+
+/* Table */
+.table-modern {
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+.table-modern thead th {
+    background-color: var(--primary-dark);
+    color: rgb(247, 243, 243);
+    border: none;
+    padding: 14px;
+}
+
+.table-modern thead th:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+.table-modern thead th:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+.table-modern tbody tr {
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(16, 42, 67, 0.05);
+}
+
+.table-modern tbody td {
+    border: none;
+    padding: 14px;
+    vertical-align: middle;
+}
+
+.table-modern tbody tr td:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+.table-modern tbody tr td:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-main {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+}
+
+.btn-main:hover {
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+/* Form */
+.form-control,
+.form-select {
+    border: 1px solid #d9e2ec;
+    border-radius: 9px;
+    padding: 10px 12px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 0 0.2rem rgba(46, 196, 182, 0.2);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+/* Alert */
+.alert-custom {
+    border: none;
+    border-left: 5px solid var(--accent-cyan);
+    border-radius: 12px;
+    background-color: #dff7f4;
+    color: #155e63;
+}
+
+/* Footer */
+footer {
+    color: #829ab1;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .page-heading h2 {
+        font-size: 1.4rem;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .table-modern {
+        font-size: 0.85rem;
+    }
+}
