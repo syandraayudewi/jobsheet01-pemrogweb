@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Buku - Simpus Mini</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 text-slate-100 min-h-screen flex font-sans">
+    
+    <!-- SIDEBAR NAVIGASI -->
+    <aside class="w-64 glass border-r border-slate-800 hidden md:flex flex-col justify-between p-6">
+        <div>
+            <div class="flex items-center space-x-3 mb-10">
+                <div class="bg-gradient-to-tr from-indigo-500 to-purple-500 p-3 rounded-xl shadow-lg shadow-indigo-500/30">
+                    <i class="fa-solid fa-book-open-reader text-xl text-white"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg tracking-wider text-white">SIMPUS MINI</h1>
+                    <p class="text-xs text-indigo-400">Yum Library</p>
+                </div>
+            </div>
+            <nav class="space-y-2">
+                <a href="../index.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-white/5 hover:text-white transition">
+                    <i class="fa-solid fa-chart-pie w-5"></i><span>Dashboard</span>
+                </a>
+                <a href="list.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 font-medium transition">
+                    <i class="fa-solid fa-book w-5"></i><span>Data Buku</span>
+                </a>
+                <a href="../anggota/list.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-white/5 hover:text-white transition">
+                    <i class="fa-solid fa-users w-5"></i><span>Data Anggota</span>
+                </a>
+            </nav>
+        </div>
+        <div class="glass p-4 rounded-xl text-center">
+            <p class="text-xs text-slate-400">Status Sistem</p>
+            <div class="flex items-center justify-center space-x-2 mt-1">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-xs font-semibold text-emerald-400">Online & Aktif</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- KONTEN UTAMA -->
+    <main class="flex-1 p-6 md:p-10 overflow-y-auto">
+        <header class="flex justify-between items-center mb-8">
+            <div>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-white">Manajemen Data Buku</h2>
+                <p class="text-slate-400 text-sm mt-1">Daftar koleksi buku perpustakaan mini (Fetch API & JSON).</p>
+            </div>
+            <a href="tambah.html" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-5 py-2.5 rounded-xl shadow-lg shadow-indigo-600/30 transition flex items-center space-x-2">
+                <i class="fa-solid fa-plus"></i><span>Tambah Buku</span>
+            </a>
+        </header>
+
+        <!-- Search Bar Real-time -->
+        <div class="glass p-4 rounded-2xl mb-6">
+            <input type="text" placeholder="Cari judul buku atau penulis (real-time)..." class="glass-input search-input w-full px-4 py-2.5 rounded-xl text-sm" data-table="tabel-buku">
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loading-indicator" class="glass p-6 rounded-2xl mb-6 text-center text-indigo-300 font-medium hidden">
+            <i class="fa-solid fa-spinner fa-spin mr-2"></i> Memuat data buku dari server...
+        </div>
+
+        <div class="glass rounded-2xl p-6">
+            <div class="overflow-x-auto">
+                <table id="tabel-buku" class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="border-b border-slate-800 text-slate-400 text-xs uppercase tracking-wider">
+                            <th class="pb-3 px-4">No</th>
+                            <th class="pb-3 px-4">Judul Buku</th>
+                            <th class="pb-3 px-4">Penulis</th>
+                            <th class="pb-3 px-4 text-center">Stok</th>
+                            <th class="pb-3 px-4 text-center">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/60 text-sm">
+                        <!-- Baris dirender dinamis oleh assets/js/buku.js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/buku.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+[
+    {"id": 1, "judul": "Laskar Pelangi", "penulis": "Andrea Hirata", "stok": 12},
+    {"id": 2, "judul": "Bumi Manusia", "penulis": "Pramoedya Ananta Toer", "stok": 8},
+    {"id": 3, "judul": "Negeri 5 Menara", "penulis": "Ahmad Fuadi", "stok": 15},
+    {"id": 4, "judul": "Filosofi Teras", "penulis": "Henry Manampiring", "stok": 20},
+    {"id": 5, "judul": "Ayat-Ayat Cinta", "penulis": "Habiburrahman El Shirazy", "stok": 10},
+    {"id": 6, "judul": "Perahu Kertas", "penulis": "Dee Lestari", "stok": 14},
+    {"id": 7, "judul": "Supernova", "penulis": "Dee Lestari", "stok": 7},
+    {"id": 8, "judul": "Hafalan Shalat Delisa", "penulis": "Tere Liye", "stok": 9},
+    {"id": 9, "judul": "Pulang", "penulis": "Leila S. Chudori", "stok": 11},
+    {"id": 10, "judul": "Ronggeng Dukuh Paruk", "penulis": "Ahmad Tohari", "stok": 6}
+]

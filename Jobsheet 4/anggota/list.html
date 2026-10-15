@@ -1,164 +1,74 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>SIMPUS-Mini | Daftar Anggota</title>
-
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Anggota - Simpus Mini</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+<body class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 glass border-r border-slate-800 hidden md:flex flex-col justify-between p-6">
+        <div>
+            <div class="flex items-center space-x-3 mb-10">
+                <div class="bg-indigo-600 p-3 rounded-xl shadow-lg shadow-indigo-500/30">
+                    <i class="fa-solid fa-users text-xl text-white"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg text-white">SIMPUS MINI</h1>
+                    <p class="text-xs text-indigo-400">Modul Anggota</p>
+                </div>
+            </div>
+            <nav class="space-y-2">
+                <a href="../buku/list.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-white/5 hover:text-white transition">
+                    <i class="fa-solid fa-book w-5"></i><span>Data Buku</span>
+                </a>
+                <a href="list.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 font-medium">
+                    <i class="fa-solid fa-users w-5"></i><span>Data Anggota</span>
+                </a>
+            </nav>
+        </div>
+    </aside>
 
-<body>
-
-    <nav class="navbar navbar-expand-md navbar-dark navbar-custom shadow-sm">
-        <div class="container">
-
-            <a class="navbar-brand fw-bold" href="../index.html">
-                SIMPUS<span>-Mini</span>
+    <!-- Konten Utama -->
+    <main class="flex-1 p-6 md:p-10">
+        <header class="flex justify-between items-center mb-8">
+            <div>
+                <h2 class="text-2xl font-extrabold text-white">Daftar Anggota Perpustakaan</h2>
+                <p class="text-slate-400 text-sm mt-1">Kelola data keanggotaan aktif perpustakaan mini.</p>
+            </div>
+            <a href="tambah.html" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-5 py-2.5 rounded-xl shadow-lg shadow-indigo-600/30 flex items-center space-x-2 transition">
+                <i class="fa-solid fa-user-plus"></i><span>Tambah Anggota</span>
             </a>
+        </header>
 
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navMenu"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Dashboard</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="../buku/list.html">Daftar Buku</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="../buku/tambah.html">Tambah Buku</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="list.html">Daftar Anggota</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="tambah.html">Tambah Anggota</a>
-                    </li>
-
-                </ul>
-            </div>
-
+        <div class="glass rounded-2xl p-6">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="border-b border-slate-800 text-slate-400 text-xs uppercase tracking-wider">
+                        <th class="pb-3 px-4">No</th>
+                        <th class="pb-3 px-4">Nama Lengkap</th>
+                        <th class="pb-3 px-4">NIM / ID</th>
+                        <th class="pb-3 px-4">Program Studi</th>
+                        <th class="pb-3 px-4 text-center">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800/60 text-sm">
+                    <tr class="hover:bg-white/5 transition">
+                        <td class="py-4 px-4">1</td>
+                        <td class="py-4 px-4 font-semibold text-indigo-300">Ahmad Fauzi</td>
+                        <td class="py-4 px-4 text-slate-400">244107060012</td>
+                        <td class="py-4 px-4">D4 Teknik Informatika</td>
+                        <td class="py-4 px-4 text-center space-x-2">
+                            <button class="p-2 rounded-lg bg-emerald-500/20 text-emerald-400 hover:bg-emerald-500/30"><i class="fa-solid fa-pen"></i></button>
+                            <button class="p-2 rounded-lg bg-rose-500/20 text-rose-400 hover:bg-rose-500/30"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </nav>
-
-    <main class="container my-5">
-
-        <div class="card card-modern">
-            <div class="card-body p-4">
-
-                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
-
-                    <div class="page-heading">
-                        <h2 class="mb-1">Daftar Anggota</h2>
-                        <p class="text-secondary mb-0">
-                            Data anggota yang terdaftar di perpustakaan
-                        </p>
-                    </div>
-
-                    <a href="tambah.html" class="btn btn-main">
-                        + Tambah Anggota
-                    </a>
-
-                </div>
-
-                <div class="alert alert-custom mb-4" role="alert">
-                    Total terdapat <strong>2 anggota</strong> yang terdaftar.
-                </div>
-
-                <div class="table-responsive">
-                    <table class="table table-modern align-middle">
-
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>No. Anggota</th>
-                                <th>Nama</th>
-                                <th>Alamat</th>
-                                <th>No. HP</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-
-                            <tr>
-                                <td>01</td>
-                                <td>
-                                    <span class="badge rounded-pill text-bg-primary">
-                                        A001
-                                    </span>
-                                </td>
-                                <td class="fw-semibold">Siti Aminah</td>
-                                <td>Malang</td>
-                                <td>0812xxxx</td>
-                                <td>
-                                    <button class="btn btn-outline-warning btn-sm">
-                                        Edit
-                                    </button>
-                                    <button class="btn btn-outline-danger btn-sm">
-                                        Hapus
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>02</td>
-                                <td>
-                                    <span class="badge rounded-pill text-bg-primary">
-                                        A002
-                                    </span>
-                                </td>
-                                <td class="fw-semibold">Budi Santoso</td>
-                                <td>Batu</td>
-                                <td>0813xxxx</td>
-                                <td>
-                                    <button class="btn btn-outline-warning btn-sm">
-                                        Edit
-                                    </button>
-                                    <button class="btn btn-outline-danger btn-sm">
-                                        Hapus
-                                    </button>
-                                </td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-                </div>
-
-            </div>
-        </div>
-
     </main>
-
-    <footer class="text-center py-4">
-        <p class="mb-0">
-            &copy; 2026 SIMPUS-Mini | Jobsheet 4
-        </p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Anggota - Simpus Mini</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 text-slate-100 min-h-screen flex font-sans">
+    
+    <!-- SIDEBAR NAVIGASI -->
+    <aside class="w-64 glass border-r border-slate-800 hidden md:flex flex-col justify-between p-6">
+        <div>
+            <div class="flex items-center space-x-3 mb-10">
+                <div class="bg-gradient-to-tr from-indigo-500 to-purple-500 p-3 rounded-xl shadow-lg shadow-indigo-500/30">
+                    <i class="fa-solid fa-book-open-reader text-xl text-white"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg tracking-wider text-white">SIMPUS MINI</h1>
+                    <p class="text-xs text-indigo-400">Yum Library</p>
+                </div>
+            </div>
+            <nav class="space-y-2">
+                <a href="../index.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-white/5 hover:text-white transition">
+                    <i class="fa-solid fa-chart-pie w-5"></i><span>Dashboard</span>
+                </a>
+                <a href="../buku/list.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-white/5 hover:text-white transition">
+                    <i class="fa-solid fa-book w-5"></i><span>Data Buku</span>
+                </a>
+                <a href="list.html" class="flex items-center space-x-3 px-4 py-3 rounded-xl bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 font-medium transition">
+                    <i class="fa-solid fa-users w-5"></i><span>Data Anggota</span>
+                </a>
+            </nav>
+        </div>
+        <div class="glass p-4 rounded-xl text-center">
+            <p class="text-xs text-slate-400">Status Sistem</p>
+            <div class="flex items-center justify-center space-x-2 mt-1">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-xs font-semibold text-emerald-400">Online & Aktif</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- KONTEN UTAMA -->
+    <main class="flex-1 p-6 md:p-10 overflow-y-auto flex flex-col justify-center items-center">
+        <div class="glass w-full max-w-lg p-8 rounded-3xl shadow-2xl">
+            <div class="flex items-center space-x-3 mb-6">
+                <a href="list.html" class="text-slate-400 hover:text-white transition"><i class="fa-solid fa-arrow-left text-lg"></i></a>
+                <h2 class="text-xl font-bold text-white">Form Tambah Anggota</h2>
+            </div>
+            <form class="needs-validation space-y-4" novalidate>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Nama Lengkap</label>
+                    <input type="text" name="nama" placeholder="Masukkan nama lengkap..." class="glass-input w-full px-4 py-3 rounded-xl text-sm" required>
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">NIM / ID Anggota</label>
+                    <input type="text" name="nim" placeholder="Masukkan NIM..." class="glass-input w-full px-4 py-3 rounded-xl text-sm" required>
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-slate-400 mb-2">Program Studi</label>
+                    <input type="text" name="prodi" placeholder="Masukkan prodi..." class="glass-input w-full px-4 py-3 rounded-xl text-sm" required>
+                </div>
+                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 rounded-xl shadow-lg transition mt-4">Simpan Anggota</button>
+            </form>
+        </div>
+    </main>
+    <script src="../assets/js/app.js"></script>
+</body>
+</html>
